@@ -6,24 +6,22 @@
  */
 int main(void)
 {
-int a, b, c, d;
+int a, b;
  
-for (a = 0; a <= 9; a++)
-for (b = 0; b < 9; b++)
-for (c = 0; c <= 9; c++)
-for (d = 0; d <= 9; d++)
+for (a = 0; a <= 99; a++)
+for (b = a; b <= 99; b++)
+if (a != b)
 {
-  if (c != 0 && !(d <= b)){
-putchar(a + '0');
-putchar(b + '0');
+putchar((a / 10) + 48);
+putchar((a % 10) + 48);
 putchar(' ');
-putchar(c + '0');
-putchar(d + '0');
-if ( a == 9 && b == 8 && c == 9 && d == 9)
-break;
+putchar((b /10) + '0');
+putchar((b %10) + '0');
+if ( a != 98 || b != 99)
+{
 putchar(',');
 putchar(' ');
-    }}
+}}
 putchar('\n');
 return (0);
 }
