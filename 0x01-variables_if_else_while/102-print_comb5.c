@@ -13,7 +13,7 @@ for (b = 0; b < 9; b++)
 for (c = 0; c <= 9; c++)
 for (d = 0; d <= 9; d++)
 {
-  if (c == 0 && !(d <= b)){
+  if (c != 0 && !(d <= b)){
 putchar(a + '0');
 putchar(b + '0');
 putchar(' ');
