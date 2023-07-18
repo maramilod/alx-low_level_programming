@@ -1,13 +1,13 @@
 #include "main.h"
+
 /**
  * main - Entry point
  *
- * _putchar - writes the character
+ * Description:prints _putchar using putchar protobtype
  *
- * Description:'prints _putchar to stdout'
- *
- * Return: always 0
- */ 
+ * Return: always 0 (Success)
+ */
+
 int main(void)
 {
 _putchar('_');
