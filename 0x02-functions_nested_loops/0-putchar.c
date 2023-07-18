@@ -1,10 +1,12 @@
 #include "main.h"
 /**
- * main.h - the header
  * main - Entry point
- *_putchar - writes the character c to stdout
- *Description:'prints _putchar to stdout'
- *Return: always 0
+ *
+ * _putchar - writes the character
+ *
+ * Description:'prints _putchar to stdout'
+ *
+ * Return: always 0
  */ 
 int main(void)
 {
