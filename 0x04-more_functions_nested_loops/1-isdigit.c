@@ -1,7 +1,10 @@
 #include "main.h"
 /**
+ * _isdigit - function that test the input
+ * if it is a digital or not
  *
- *
+ *@c: input
+ *Return: return 1 if c is digital or 0
  */
 int _isdigit(int c)
 {
