@@ -10,10 +10,16 @@
  */
 int main(void)
 {
-	int i;
+	int f;
+	char i;
 
 	srand(time(0));
-	i = rand();
-	printf("%d", i);
+	while (f <= 2645)
+	{
+		i = rand() % 128;
+		f += i;
+		putchar(i);
+	}
+	putchar(2772 - f);
 	return (0);
 }
