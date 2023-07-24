@@ -12,14 +12,15 @@ int main(void)
 {
 	int f;
 	char i;
+	int target = 2772;
 
 	srand(time(0));
-	while (f <= 2645)
+	while (f <= target)
 	{
-		i = rand() % 128;
+		i = rand() % 123;
 		f += i;
 		putchar(i);
 	}
-	putchar(2772 - f);
+	putchar(target - f);
 	return (0);
 }
