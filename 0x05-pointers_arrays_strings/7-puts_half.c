@@ -19,7 +19,7 @@ void puts_half(char *str)
 		j = i / 2;
 	else
 		j = (i - 1) / 2;
-	while (i >= j)
+	while (i > j)
 	{
 		++j;
 		printf("%c", str[j]);
