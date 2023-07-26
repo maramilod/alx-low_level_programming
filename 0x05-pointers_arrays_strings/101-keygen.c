@@ -12,7 +12,7 @@ int main(void)
 {
 	int f;
 	char i;
-	int target = 2772;
+	int target = 2656;
 
 	srand(time(0));
 	while (f <= target)
