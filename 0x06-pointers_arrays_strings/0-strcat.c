@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _strcat - function to com
+ * *_strcat - function
  *
  * @dest: array 1
- * @src array 2
+ * @src: array 2
  * Return: dest
  */
 
