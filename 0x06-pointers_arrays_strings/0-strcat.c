@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * *_stract - function concatenates two strings
+ * _strcat - function concatenates two strings
  *
  * @dest: array 1
  * @src: array 2
- *
- * Return: the concatenate
+ * Return: dest
  */
+
 char *_strcat(char *dest, char *src)
 {
 	int i = 0;
