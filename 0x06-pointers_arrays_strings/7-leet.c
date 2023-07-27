@@ -1,28 +1,30 @@
 #include "main.h"
 /**
- * *leet - function that encodes a string
- *
- * Description: string
- * @s: array
- * Return: return str
+ *leet - function
+ *Description: string lll
+ *@s: value
+ *Return: always
  */
 char *leet(char *s)
 {
-	int i = 0;
+	int i, a;
+	char l[] = {"aeotl"};
+	char n[] = {"AEOTL"};
+	char o[] = {"43071"};
 
-	while (s[i])
+	i = 0;
+
+	while (s[i] != '\0')
 	{
-		if (s[i] == 'a' || s[i] == 'A')
-			s[i] = 52;
-		else if (s[i] == 'e' || s[i] == 'E')
-			s[i] = 51;
-		else if (s[i] == 'o' || s[i] == 'O')
-			s[i] = 48;
-		else if (s[i] == 't' || s[i] == 'T')
-			s[i] = 55;
-		else if (s[i] == 'l' || s[i] == 'L')
-			s[i] = 49;
+		for (a = 0; a < 5; a++)
+		{
+		if (s[i] == l[a] || s[i] == n[a])
+		{
+			s[i] = o[a];
+		}
+		}
 		i++;
 	}
+
 	return (s);
 }
