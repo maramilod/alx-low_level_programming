@@ -1,5 +1,11 @@
 #include "main.h"
 /**
+ * *_stract - function concatenates two strings
+ *
+ * @dest: array 1
+ * @src: array 2
+ *
+ * Return: the concatenate
  */
 char *_strcat(char *dest, char *src)
 {
