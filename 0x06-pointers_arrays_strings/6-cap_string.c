@@ -1,5 +1,9 @@
 #include "main.h"
 /**
+ * *cap_string - function cap
+ *
+ * @str:pointer
+ * Return:always
  */
 char *cap_string(char *str)
 {
