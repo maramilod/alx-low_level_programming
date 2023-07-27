@@ -2,6 +2,7 @@
 /**
  * *leet - function that encodes a string 
  *
+ * Description: string
  * @str: array
  * Return: return str
  */
