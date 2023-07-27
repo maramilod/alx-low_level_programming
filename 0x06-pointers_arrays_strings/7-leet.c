@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * *leet - function that encodes a string 
+ * *leet - function that encodes a string
  *
  * Description: string
- * @str: array
+ * @s: array
  * Return: return str
  */
 char *leet(char *s)
@@ -17,12 +17,12 @@ char *leet(char *s)
 		else if (s[i] == 'e' || s[i] == 'E')
 			s[i] = 51;
 		else if (s[i] == 'o' || s[i] == 'O')
-			s[i] == 48;
+			s[i] = 48;
 		else if (s[i] == 't' || s[i] == 'T')
-			s[i] == 55;
+			s[i] = 55;
 		else if (s[i] == 'l' || s[i] == 'L')
-			s[i] == 49;
+			s[i] = 49;
 		i++;
 	}
-	return (str);
+	return (s);
 }
