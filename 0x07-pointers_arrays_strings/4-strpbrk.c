@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * *_strpbrk - function that searches a string for any of a set of bytes
  *
@@ -7,19 +8,20 @@
  *
  * Return: s or NULL
  */
+
 char *_strpbrk(char *s, char *accept)
 {
 	int i = 0;
-	int j = 0;
+	int z = 0;
 
 	while (s[i] != 32)
 	{
 		j = 0;
-		while (accept[j])
+		while (accept[z])
 		{
-			if (s[i] == accept[j])
+			if (s[i] == accept[z])
 				return (s + i);
-			j++;
+			z++;
 		}
 		i++;
 	}
