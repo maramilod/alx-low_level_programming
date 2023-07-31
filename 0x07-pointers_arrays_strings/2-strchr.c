@@ -9,6 +9,7 @@
  *
  * Return: s or NULL
  */
+
 char *_strchr(char *s, char c)
 {
 	int i = 0;
@@ -19,5 +20,5 @@ char *_strchr(char *s, char c)
 			return (s + i);
 		i++;
 	}
-	return (NULL);
+	return ('\0');
 }
