@@ -8,16 +8,20 @@
  */
 int _sqrt_recursion(int n)
 {
-	int i = 1;
+	return (sqrtt(n, 1));
+}
+/**
+ * sqrtt - function
+ * @n: number
+ * Return: result
+ */
 
-	if (i * i == n)
-		return (i);
-	else if (i * i > n)
+int sqrtt(int n, int i)
+{
+if (i * i < n)
+return (sqrtt(n, i + 1));
+		if (i * i > n)
 		return (-1);
-	else if (i * i != n)
-	{
-		i = _sqrt_recursion(n) - 1;
+		else
 		return (i);
-	}
-	return (i);
 }
