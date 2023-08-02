@@ -13,6 +13,7 @@ int _sqrt_recursion(int n)
 /**
  * sqrtt - function
  * @n: number
+ * @i: number -_-
  * Return: result
  */
 
