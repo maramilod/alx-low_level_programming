@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * int is_prime_number - function that returns the natural
+ * is_prime_number - function that returns the natural
  * square root of a number
  *
  * @n: number
@@ -9,7 +9,7 @@
 int is_prime_number(int n)
 {
 	if (n < 0)
-		n *= -1;
+		return (0);
 	return (sqrtt(n, 1));
 }
 /**
