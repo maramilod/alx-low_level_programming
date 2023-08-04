@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 {
 	unsigned int sum = 0;
 	int i;
+
 	for (i = 1; i < argc; i++)
 	{
 		if (*argv[i] <= 57 && *argv[i] >= 48)
