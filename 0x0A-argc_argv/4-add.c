@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
-	else
+	else if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 				if (atoi(argv[i]) > 0)
 					sum += atoi(argv[i]);
 			}
-			else
+			else if (*argv[i] > 57 || *argv[i] < 48)
 			{
 				printf("Error\n");
 				return (1);
