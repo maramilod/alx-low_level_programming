@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <ctype.h>
 #include <stdio.h>
 /**
  * main - entry function
@@ -20,7 +19,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isdigit(*argv[i]))
+			if (*argv[i] <= 57 && *argv[i] >= 48)
 				sum += atoi(argv[i]);
 			else
 			{
