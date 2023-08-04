@@ -10,26 +10,19 @@ int main(int argc, char *argv[])
 {
 	unsigned int sum = 0;
 	int i;
-
-	if (argc == 1)
+	for (i = 1; i < argc; i++)
 	{
-		printf("0\n");
-	}
-	else if (argc > 2)
-	{
-		for (i = 1; i < argc; i++)
+		if (*argv[i] <= 57 && *argv[i] >= 48)
 		{
-			if (*argv[i] <= 57 && *argv[i] >= 48)
-			{
-				if (atoi(argv[i]) > 0)
-					sum += atoi(argv[i]);
-			}
-			else if (*argv[i] > 57 || *argv[i] < 48)
-			{
-				printf("Error\n");
-				return (1);
-			}
+			if (atoi(argv[i]) > 0)
+				sum += atoi(argv[i]);
 		}
-	printf("%d\n", sum);					}
+		else if (*argv[i] > 57 || *argv[i] < 48)
+		{
+			printf("Error\n");
+			return (1);
+		}
+	}
+	printf("%d\n", sum);
 	return (0);
 }
