@@ -9,25 +9,15 @@
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int i;
 	char *c;
 
-	for (i = 1; i < argc; i++)
+	while (--argc)
 	{
-		for (c = argv[i]; *c; c++)
-		{
-			if (*c <= 57 && *c >= 48)
-			{
-				if (atoi(argv[i]) > 0)
-					sum += atoi(argv[i]);
-			}
-			else if (*c > 57 || *c < 48)
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-	}
+		for (c = argv[argc]; *c; c++)
+			if (*c < '0' || *c > '9')
+				return (printf("Error\n"), 1);
+		sum += atoi(argv[argc]);
+	
 	printf("%d\n", sum);
 	return (0);
 }
