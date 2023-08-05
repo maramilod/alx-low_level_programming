@@ -14,14 +14,14 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		for (v = argv[i]; *c; c++)
+		for (c = argv[i]; *c; c++)
 		{
 			if (*c <= 57 && *c >= 48)
 			{
 				if (atoi(argv[i]) > 0)
 					sum += atoi(argv[i]);
 			}
-			else if (*argv[i] > 57 || *argv[i] < 48)
+			else if (*c > 57 || *c < 48)
 			{
 				printf("Error\n");
 				return (1);
