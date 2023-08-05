@@ -10,18 +10,22 @@ int main(int argc, char *argv[])
 {
 	int sum = 0;
 	int i;
+	char *c;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (*argv[i] <= 57 && *argv[i] >= 48)
+		for (v = argv[i]; *c; c++)
 		{
-			if (atoi(argv[i]) > 0)
-				sum += atoi(argv[i]);
-		}
-		else if (*argv[i] > 57 || *argv[i] < 48)
-		{
-			printf("Error\n");
-			return (1);
+			if (*c <= 57 && *c >= 48)
+			{
+				if (atoi(argv[i]) > 0)
+					sum += atoi(argv[i]);
+			}
+			else if (*argv[i] > 57 || *argv[i] < 48)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 	}
 	printf("%d\n", sum);
