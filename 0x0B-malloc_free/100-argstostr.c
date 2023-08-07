@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	for (i = 0; i < ac; i++)
+	for (i = 0; j < ac; i++)
 	{
 		i += _strlen(av[j]);
 		j++;
@@ -48,6 +48,7 @@ char *argstostr(int ac, char **av)
 				j++;
 			}
 			ar[x] = '\n';
+			x++;
 			i++;
 		}
 		ar[x] = '\0';
