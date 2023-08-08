@@ -6,22 +6,41 @@
  */
 int _strr(char *s)
 {
-	int i, j = 0;
+	int j = 0;
+	int i = 0;
 
-	while (s[i] != 0)
+	while (*(s + i) && *(s + i) != ' ')
 	{
-		if (s[i] == ' ')
-		{
-			if (s[i + 1] != ' ' && s[i + 1] != '\0')
-				j++;
-		}
-		else if (i == 0)
-			j++;
+		j++;
 		i++;
 	}
-	j++;
-	printf("%d",j);
 	return (j);
+}
+/**
+ *co - function
+ *@str: value
+ *Return: always
+ */
+
+int co(char *str)
+{
+	int i = 0;
+	int w = 0;
+	int l = 0;
+
+	for (i = 0; *(str + i); i++)
+	{
+		l++;
+	}
+	for (i = 0; i < l; i++)
+	{
+		if (*(str + i) != ' ')
+		{
+			w++;
+			i += _strr(str + i);
+		}
+	}
+	return (w);
 }
 /**
  * **strtow - function
@@ -30,46 +49,38 @@ int _strr(char *s)
  */
 char **strtow(char *str)
 {
-	int j, a, b;
+	int wa, y, le, l;
 	char **ar;
 	int i = 0;
-	int c = 0;
-	int d = 0;
 
-	printf("%i\n",i);
 	if (*str == 0 || str == NULL)
 		return (NULL);
-	c = _strr(str);
-	if (c == 1)
+	wa = co(str);
+	if (wa == 0)
 		return (NULL);
-	ar = (char **)malloc(c * sizeof(char *));
+	ar = malloc((wa + 1) * sizeof(char *));
 	if (ar == NULL)
 		return (NULL);
-	ar[c - 1] = NULL;
-	while (str[i])
+	for (y = 0; y < wa; y++)
 	{
-		if (str[i] != ' ' && (i == 0 || str[i - b] == ' '))
-		{
-			for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
-				;
-			ar[d] = (char *)malloc(1 + j * sizeof(char));
-			j--;
-			if (ar[d] == NULL)
-			{
-				for (a = 0; a < d; a++)
-					free(ar[a]);
-				free(ar[c - 1]);
-				free(ar);
-				return (NULL);
-			}
-			for (b = 0; b < j; b++)
-				ar[d][b] = str[i + b];
-			ar[d][b] = '\0';
-			d++;
-			i += j;
-		}
-		else
+		while (str[i] == ' ')
 			i++;
+
+		le = _strr(str + i);
+
+		ar[y] = malloc(sizeof(char) * (le + 1));
+
+		if (ar[y] == NULL)
+		{
+			for (; y >= 0; y--)
+				free(ar[y]);
+			free(ar);
+			return (NULL);
+		}
+			for (l = 0; l < le; l++)
+				ar[y][l] = str[i++];
+			ar[y][l] = '\0';
 	}
+	ar[y] = NULL;
 	return (ar);
 }
