@@ -11,7 +11,7 @@ int main(void)
 {
     char *concat;
 
-    concat = string_nconcat("ddddddd", "NULLdddddddddddddddddo", 6);
+    concat = string_nconcat( "i ggggggggggggggggggg yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy ffffffffffffffs sssssssssssssssssssssssssssssss ccccccccccccccccccccccccccccccc aa d","p" , 6);
     printf("%s\n", concat);
     free(concat);
     return (0);
