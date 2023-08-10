@@ -12,10 +12,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
-	p = malloc(sizeof(size) * nmemb + 1);
+	p = malloc(size * nmemb);
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < nmemb * size; i++)
 		p[i] = 48;
 	return (p);
 }
