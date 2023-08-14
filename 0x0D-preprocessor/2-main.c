@@ -1,11 +1,11 @@
 #include <stdio.h>
+
 /**
  * main - entry point
- * 
  * Return: always 0
  */
-int main()
+int main(void)
 {
-	printf("%s\n",__FILE__);
-	return(0);
+	printf("%s\n", __FILE__);
+	return (0);
 }
