@@ -1,10 +1,10 @@
 #include "3-calc.h"
 /**
- * get_op_func: weirdo func
+ * get_op_func - weirdo func
  * the returned function pointer can be used
  * @s: argv[3]
  * int 1
- * int 2
+ * int 2i
  *
  * Return: function pointer based on the provided operator string
  */
