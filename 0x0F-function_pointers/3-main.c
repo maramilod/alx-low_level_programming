@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%s\n", c);
+
 	p = get_op_func(c);
 	res = p(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", res);
