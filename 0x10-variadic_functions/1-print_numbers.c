@@ -37,12 +37,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			x = va_arg(arg, int);
 			printf("%d", x);
 			if (separator != NULL)
-				for (j = 0; j < l + 1; j++)
+				for (j = 0; j < l; j++)
 				{
 					printf("%c", separator[j]);
 				}
 		}
 		x = va_arg(arg, int);
 		printf("%d\n", x);
+		va_end(arg);
 	}
 }
