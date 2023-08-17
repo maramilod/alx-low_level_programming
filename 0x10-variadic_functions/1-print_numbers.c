@@ -1,19 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
-/**
- * _strlen - function
- * @s: string
- * Return: lenght
- */
-int _strlen(const char *s)
-{
-	int i = 0;
 
-	while (s[i])
-		i++;
-	return (i);
-}
 /**
  * print_numbers - function that prints numbers, followed by a new line
  *
@@ -24,10 +11,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list arg;
 	unsigned int i;
-	int j, x, l;
-
-	if (separator != NULL)
-		l = _strlen(separator);
+	int x;
 
 	if (n != 0)
 	{
@@ -37,10 +21,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			x = va_arg(arg, int);
 			printf("%d", x);
 			if (separator != NULL)
-				for (j = 0; j < l; j++)
-				{
-					printf("%c", separator[j]);
-				}
+				printf("%s", separator);
 		}
 		x = va_arg(arg, int);
 		printf("%d\n", x);
