@@ -30,16 +30,19 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		l = _strlen(separator);
 
 	va_start(arg, n);
-	for (i = 0; i < n - 1; i++)
+	if (n != 0)
 	{
+		for (i = 0; i < n - 1; i++)
+		{
+			x = va_arg(arg, int);
+			printf("%d", x);
+			if (separator != NULL)
+				for (j = 0; j < l; j++)
+				{
+					printf("%c", separator[j]);
+				}
+		}
 		x = va_arg(arg, int);
-		printf("%d", x);
-		if (separator != NULL)
-			for (j = 0; j < l; j++)
-			{
-				printf("%c", separator[j]);
-			}
+		printf("%d\n", x);
 	}
-	x = va_arg(arg, int);
-	printf("%d\n", x);
 }
