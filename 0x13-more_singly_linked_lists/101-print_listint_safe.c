@@ -47,6 +47,8 @@ size_t print_listint_safe(const listint_t *head)
 	size_t n, i = 0;
 
 	n = loop(head);
+	if (!head || head->next == NULL)
+		exit(98);
 	if (n == 0)
 	{
 		for (; head != NULL; n++)
