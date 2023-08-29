@@ -34,9 +34,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		{
 			fh->next = t->next;
 			t->next = fh;
-			return (t);
+			return (fh);
 		}
 	}
+	free(fh);
 	return (NULL);
 }
 
