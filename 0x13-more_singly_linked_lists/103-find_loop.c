@@ -8,7 +8,6 @@
 listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *a = NULL;
-	int i = 0;
 
 	while (head)
 	{
