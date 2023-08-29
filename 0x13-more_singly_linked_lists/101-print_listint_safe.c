@@ -44,16 +44,15 @@ size_t loop(const listint_t *head)
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t n, i;
+	size_t n, i = 0;
 
 	n = loop(head);
 	if (n == 0)
 	{
-		while (head)
+		for (; head != NULL; n++)
 		{
-			printf("[%p] %i\n", (void *)head, head->n);
+			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
-			n++;
 		}
 	}
 	else
