@@ -1,25 +1,5 @@
 #include "main.h"
 /**
- * _atoi - function convert a string
- *
- * @b: the string
- * Return: number
- */
-long unsigned int _atoi(const char *b)
-{
-	long unsigned int number = 0;
-
-	do {
-		if (*b == 48 || *b == 49)
-		{
-			number = (number * 10) + (*b - 48);
-		}
-		else if (*b != 48 && *b != 49 && *b != '\0')
-			return (0);
-	} while (*b++);
-	return (number);
-}
-/**
  * binary_to_uint - function
  *
  * @b: binary
@@ -27,17 +7,16 @@ long unsigned int _atoi(const char *b)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	long unsigned int sum = 0, n, binary, w = 1;
+	unsigned int sum = 0, n = 0;
 
 	if (b == NULL)
 		return (sum);
-	binary = _atoi(b);
-	while (binary)
+	while (b[n])
 	{
-		n = binary % 10;
-		sum += n * w;
-		w *= 2;
-		binary /= 10;
+		if (b[n] != 48 && b[n] != 49)
+			return (0);
+		sum = 2 * sum + (b[n] - '0');
+		n++;
 	}
-	return ((unsigned int)sum);
+	return (sum);
 }
