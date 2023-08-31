@@ -5,13 +5,15 @@
  * @b: the string
  * Return: number
  */
-unsigned int _atoi(const char *b)
+long unsigned int _atoi(const char *b)
 {
-	unsigned int number = 0;
+	long unsigned int number = 0;
 
 	do {
 		if (*b == 48 || *b == 49)
+		{
 			number = (number * 10) + (*b - 48);
+		}
 		else if (*b != 48 && *b != 49 && *b != '\0')
 			return (0);
 	} while (*b++);
@@ -25,18 +27,17 @@ unsigned int _atoi(const char *b)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int sum = 0, n, binary, w = 1;
+	long unsigned int sum = 0, n, binary, w = 1;
 
 	if (b == NULL)
 		return (sum);
 	binary = _atoi(b);
-	while (binary && *b)
+	while (binary)
 	{
 		n = binary % 10;
 		sum += n * w;
 		w *= 2;
 		binary /= 10;
-		++*b;
 	}
-	return (sum);
+	return ((unsigned int)sum);
 }
