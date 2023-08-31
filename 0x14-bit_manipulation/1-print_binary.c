@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 
 	if (!n)
 		return;
-	for (i = 32; i >= 0; i--)
+	for (i = 64; i >= 0; i--)
 	{
 		if (n >> i & 1)
 		{
