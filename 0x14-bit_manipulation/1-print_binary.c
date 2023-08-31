@@ -19,5 +19,5 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 	}
 	if (!cou)
-		_putchar(cou);
+		_putchar(48);
 }
