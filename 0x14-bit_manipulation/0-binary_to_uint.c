@@ -14,8 +14,6 @@ unsigned int _atoi(const char *b)
 			number = (number * 10) + (*b - 48);
 		else if (*b != 48 && *b != 49 && *b != '\0')
 			return (0);
-		else if (number > 0)
-			break;
 	} while (*b++);
 	return (number);
 }
