@@ -27,8 +27,6 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int sum = 0, n, binary, w = 1;
 
-	if (b == NULL)
-		return (sum);
 	binary = _atoi(b);
 
 	while (binary && b)
