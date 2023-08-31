@@ -31,7 +31,7 @@ unsigned int binary_to_uint(const char *b)
 
 	binary = _atoi(b);
 
-	while (binary)
+	while (binary && b)
 	{
 		n = binary % 10;
 		sum += n * w;
