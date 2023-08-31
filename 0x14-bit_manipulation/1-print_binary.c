@@ -23,5 +23,5 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 	}
 	if (!cou)
-		_putchar(count);
+		_putchar(cou);
 }
