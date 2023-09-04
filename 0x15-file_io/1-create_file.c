@@ -8,7 +8,7 @@ int lele(char *c)
 {
 	int j = 0;
 
-	if (!c == NULL
+	if (!c)
 		return (0);
 	while (*c++)
 		j++;
