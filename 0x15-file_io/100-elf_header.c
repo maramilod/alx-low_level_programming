@@ -170,7 +170,7 @@ void print_entry(Elf64_Ehdr h)
 		len = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
 		while (!p[i])
 			i++;
-		printf("%x", p[i]);
+		printf("%x", p[i++]);
 		for (; i <= len; i++)
 			printf("%02x", p[i]);
 		printf("\n");
@@ -204,7 +204,7 @@ void printclas(Elf64_Ehdr h)
  */
 void printver(Elf64_Ehdr h)
 {
-	printf("  Version:                           ");
+	printf("  Version:                           %d", h.e_ident[EI_VERSION]);
 	switch (h.e_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
@@ -233,15 +233,17 @@ int main(int argc, char **argv)
 	ssize_t b;
 
 	if (argc != 2)
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(98);
+		dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n"), exit(98);
 	f = open(argv[1], O_RDONLY);
 	if (f == -1)
 		dprintf(STDERR_FILENO, "Can't open file: %s\n"
 				, argv[1]), exit(98);
 	b = read(f, &h, sizeof(h));
 	if (b < 1 || b != sizeof(h))
-		dprintf(STDERR_FILENO, "Can't read from file %s\n"
+	{
+		dprintf(STDERR_FILENO, "Can't read from file: %s\n"
 				, argv[1]), exit(98);
+	}
 	if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E'
 			&& h.e_ident[2] == 'L' && h.e_ident[3] == 'F')
 	{
