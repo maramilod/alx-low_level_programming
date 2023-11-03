@@ -21,8 +21,8 @@ hash_node_t *make_n(const char *k, const char *v)
 	node->value = strdup(v);
 	if (!(node->value))
 	{
-		free(node);
 		free(node->key);
+		free(node);
 		return (NULL);
 	}
 	node->next = NULL;
@@ -51,7 +51,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(tmp->key, key) == 0)
 		{
 			nval = strdup(value);
-			if (nval)
+			if (!nval)
 				return (0);
 			free(tmp->value);
 			tmp->value = nval;
