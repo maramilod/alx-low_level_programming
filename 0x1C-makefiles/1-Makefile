@@ -1,5 +1,5 @@
 CC = gcc
-SRC = main.c scholl.c
+SRC = main.c school.c
 
 all: school
 
